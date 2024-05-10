@@ -18,7 +18,7 @@ function Tournaments() {
     const [filteredTournaments, setFilteredTournaments] = useState([]);
     const [loading, setLoading] = useState(true);
     const [searchCriteria, setSearchCriteria] = useState("");
-
+    const apiUrl = import.meta.env.VITE_API_URL;
     useEffect(() => {
         fetchTournaments();
     }, []);
@@ -30,7 +30,7 @@ function Tournaments() {
 
     const fetchTournaments = async () => {
         try {
-            const apiUrl = import.meta.env.VITE_API_URL;
+
 
             const response = await axios.get(`${apiUrl}/tournament/frontoffice/all`);
             console.log("Tournaments: ", response.data);

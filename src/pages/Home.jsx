@@ -11,11 +11,11 @@ import { faCheck, faGift, faStar, faGem } from '@fortawesome/free-solid-svg-icon
 import TopPLayers from '../sections/TopPlayers';
 import TopTeams from '../sections/TopTeams';
 
+const apiUrl = import.meta.env.VITE_API_URL;
 
 class FetchMatchInfo extends React.Component {
     state = { loading: true, matches: [], error: null, lastMatches: [] };
 
-    apiUrl = import.meta.env.VITE_API_URL;
 
 
     componentDidMount() {
