@@ -7,7 +7,7 @@ function MixedBracket({ stages }) {
 
     useEffect(() => {
         if (!stages) return;
-        console.log("hani houni")
+
         let index = 1;
         const stagesCopy = [...stages].splice(1);
 

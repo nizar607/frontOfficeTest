@@ -128,11 +128,11 @@ function Stats({ divisionId }) {
                                                     <div
 
                                                         className={`costum-division-links col-6 col-md-2 text-center pb-2 pt-1 border border-bottom-white  costum-division-link-selected ${subDivisionLink === "bracket" ? "bg-primary" : "bg-dark"}`} onClick={() => setSubDivisionLink("bracket")}>
-                                                        <h5>standing table</h5>
+                                                        <h5>bracket</h5>
                                                     </div>
 
                                                     <div className={`costum-division-links col-6 col-md-2 text-center pb-2 pt-1 border border-bottom-white ${subDivisionLink === "standing" ? "bg-primary" : "bg-dark"}`} onClick={() => setSubDivisionLink("standing")}>
-                                                        <h5>bracket</h5>
+                                                        <h5>standing table</h5>
                                                     </div>
 
                                                     <div className="col-12">
