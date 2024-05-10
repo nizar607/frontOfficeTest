@@ -16,7 +16,8 @@ const LiveMatches = () => {
     const [selectedMatch, setSelectedMatch] = useState({ _id: '', animate: false });
     const [tournament, setTournament] = useState([]);
     const [selectedTournament, setSelectedTournament] = useState(null);
-    const socket = io('http://localhost:3002');
+    const apiUrl = import.meta.env.VITE_API_URL;
+    const socket = io(apiUrl);
     const matchesRef = useRef(matches);
 
     const handleTournamentClick = (tournamentId) => {

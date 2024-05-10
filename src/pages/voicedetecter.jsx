@@ -55,7 +55,7 @@ const VoiceDetector = () => {
 
     const fetchTournaments = async () => {
         try {
-            const response = await fetch('http://localhost:3001/tournament/tournamentsAdmin');
+            const response = await fetch(`${apiUrl}/tournament/tournamentsAdmin`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -63,7 +63,7 @@ const VoiceDetector = () => {
             console.log('Tournaments fetched:', data);
             setTournaments(data);
 
-            const topScorerResponse = await fetch('http://localhost:3001/match/top-scorer');
+            const topScorerResponse = await fetch(`${apiUrl}/match/top-scorer`);
             if (!topScorerResponse.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -122,7 +122,7 @@ const VoiceDetector = () => {
             } else if (transcript.includes("team")) {
                 recognition.stop();
                 setIsListening(false);
-                fetch('http://localhost:3001/team/team-with-max-points')
+                fetch(`${apiUrl}/team/team-with-max-points`)
                     .then(response => response.json())
                     .then(data => {
                         setMessage(`The team with maximum points is ${data.teamName} with ${data.maxPoints} points.`);

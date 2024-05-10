@@ -202,7 +202,7 @@ function Tournaments() {
                                             <div className="img-container mb-4 text-center" >
 
                                                 <Link to={`/divisions/${tournament._id}`}>
-                                                    <img src={`http://localhost:3001/${tournament.tournamentLogo}`} alt="Image" className="img-fluid" style={{ width: '100p%', height: '200px', objectFit: 'cover' }} />
+                                                    <img src={`${apiUrl}/${tournament.tournamentLogo}`} alt="Image" className="img-fluid" style={{ width: '100p%', height: '200px', objectFit: 'cover' }} />
                                                 </Link>
 
                                             </div>

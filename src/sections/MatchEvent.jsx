@@ -1,6 +1,6 @@
 function MatchEvent({ event, match }) {
 
-    const ApiUrl = "http://localhost:3001";
+    const ApiUrl = import.meta.env.VITE_API_URL;
 
     return (
 

@@ -40,7 +40,7 @@ function MatchComponent() {
     useEffect(() => {
         fetchMatch();
 
-        const socketInstance = io('http://localhost:3002');
+        const socketInstance = io(apiUrl);
 
         setSocket(socketInstance);
 

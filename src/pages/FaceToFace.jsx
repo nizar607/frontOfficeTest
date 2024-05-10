@@ -12,6 +12,7 @@ const FaceToFace = () => {
     const [showVideo, setShowVideo] = useState(false);
     const videoRef = useRef();
 
+
     console.log("Match ID: ", matchId);
     const [loading, setLoading] = useState(true); // Add this line
     const [socket, setSocket] = useState(null);
@@ -47,7 +48,7 @@ const FaceToFace = () => {
 
     useEffect(() => {
 
-        const socketInstance = io('http://localhost:3002');
+        const socketInstance = io(apiUrl);
         setSocket(socketInstance);
 
 

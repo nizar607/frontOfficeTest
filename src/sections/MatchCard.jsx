@@ -5,7 +5,7 @@ import { faFutbolBall, faScaleBalanced, faSquare, faExternalLinkAlt, faArrowRigh
 
 const MatchCard = ({ matches }) => {
 
-    const ApiUrl = "http://localhost:3001";
+    const ApiUrl =  import.meta.env.VITE_API_URL;
     console.log("from matchCard", matches);
 
     return (

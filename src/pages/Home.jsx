@@ -15,6 +15,7 @@ import TopTeams from '../sections/TopTeams';
 class FetchMatchInfo extends React.Component {
     state = { loading: true, matches: [], error: null, lastMatches: [] };
 
+    apiUrl = import.meta.env.VITE_API_URL;
 
 
     componentDidMount() {
@@ -26,7 +27,7 @@ class FetchMatchInfo extends React.Component {
 
     async fetchLastMatches() {
         try {
-            const response = await fetch('http://localhost:3001/front/match/lastMatches');
+            const response = await fetch(`${apiUrl}/front/match/lastMatches`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -43,7 +44,7 @@ class FetchMatchInfo extends React.Component {
 
     async fetchMatchData() {
         try {
-            const response = await fetch('http://localhost:3001/match/matches');
+            const response = await fetch(`${apiUrl}/match/matches`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -95,7 +96,7 @@ class FetchTournamentInfo extends React.Component {
 
     async fetchTournamentData() {
         try {
-            const response = await fetch('http://localhost:3001/tournament/tournamentsAdmin');
+            const response = await fetch(`${apiUrl}/tournament/tournamentsAdmin`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -164,7 +165,7 @@ class Home extends Component {
 
     fetchNextMatchDate = async () => {
         try {
-            const response = await fetch('http://localhost:3001/match/nextMatch');
+            const response = await fetch(`${apiUrl}/match/nextMatch`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -247,7 +248,7 @@ class Home extends Component {
 
     fetchLastMatches = async () => {
         try {
-            const response = await fetch('http://localhost:3001/match/front/getLastMatches');
+            const response = await fetch(`${apiUrl}/match/front/getLastMatches`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
