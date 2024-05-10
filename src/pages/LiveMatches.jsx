@@ -161,7 +161,7 @@ const LiveMatches = () => {
                                 <div className="col-lg-12" key={match._id}>
                                     <div className="widget-next-match">
                                         <div className="widget-title d-flex align-items-center">
-                                            <img src="/src/assets/images/division.png" style={{ width: '30px', height: '30px', marginRight: '10px' }} alt="" />
+                                            <img src={`/assets/images/division.png`} style={{ width: '30px', height: '30px', marginRight: '10px' }} alt="" />
                                             <h3>Division {match.division?.name}</h3>
                                         </div>
                                         <div className="widget-body mb-3">
