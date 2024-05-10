@@ -22,7 +22,7 @@ function Header() {
 
                         <div className="bg-primary">
 
-                            <img className="position-absolute top-0 start-0" src={`/assets/images/linkupLogo.png`} alt="logo" style={{width:'15%'}} />
+                            <img className="position-absolute top-0 start-0" src={`https://www.linkup-news.vercel.app/assets/images/linkupLogo.png`} alt="logo" style={{width:'15%'}} />
 
                         </div>
 
